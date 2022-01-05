@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for( 'static', filename='reshen_style.css')}}">
+  <title>Решение</title>
+</head>
+<body>
+  <div class="shap"><h1 class="text_z"> Расчет погрешности прямых имерений </h1></div>
+  <div class="content">
+
+        <table class="tbl" border="1">
+          <tr>
+            <td>Значение</td>
+            <td>Вылет</td>
+          </tr>
+            {% for i in range(0,10) %}
+          <tr>
+            <td>{{data[i]}}</td>
+            <td id="{{i}}">{{data_p[i]}}</td>
+          </tr>
+            {% endfor %}
+        </table>
+
+        <div class="shap2"><h3 class="text_z2"> Расчеты </h3></div>
+
+        <div class="rasch">
+            {% if vilit > 0 %}
+                {% for i in range(vilit) %}
+                    <div class="err">
+                        <p>Среднее: {{ vilit_sr[i] }}</p>
+                        <p>СКО: {{ vilit_sko[i] }}</p>
+                        <p>Вылеты: {{ vilit_z[i] }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <div class="ok">
+                <p>Среднее: {{ sr }}</p>
+                <p>СКО: {{ sko }}</p>
+                <p>Вылеты: Вылетов нет</p>
+                <p>СКО среднее: {{ sr_sko }} </p>
+                <p>Оценочная погрешность: {{ ochen_pogr }}</p>
+                <p>Погрешность прибора: {{ pribor }}</p>
+                <p>Полная погрешность: {{ poln }}</p>
+            </div>
+        </div>
+
+        <div class="block"><a href="/"><button class="bt"> Назад </button></a></div>
+
+  </div>
+  <div class="nizok"></div>
+</body>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+</html>

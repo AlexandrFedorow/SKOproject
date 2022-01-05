@@ -1,0 +1,39 @@
+.shap{
+  width: 100%;
+  height: auto;
+}
+
+.text_z{
+  width: 100%;
+  text-align: center;
+}
+
+.content{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  margin-top: 5%;
+}
+
+.form_block{
+  text-align: center;
+}
+
+.input{
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid;
+  font-size: 14px;
+}
+
+.bt{
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  font-size:14px;
+  color: #000;
+  border-radius: 5px; 
+  background-color: #11ff00;
+}
