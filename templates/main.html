@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="verify-admitad" content="9197bb4a3c" />
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="{{ url_for( 'static', filename='main_style.css')}}">
@@ -29,7 +30,19 @@
 
           </form>
     </div>
-    <div class="nizok"></div>
+
+    <div class="b-popup" id="popup1">
+        <div class="main">
+
+            <div class="back">
+              <a href="javascript:PopUpHide()">x</a>
+            </div>
+            <div class="b-popup-content">
+                <a href="https://ad.admitad.com/g/4m3ujrryhe9197bb4a3caadae9dc1a"><img src="{{ url_for('static', filename='img/gg.png') }}"></a>
+            </div>
+        </div>
+    </div>
+
     <script src="{{ url_for('static', filename='vvod.js') }}"></script>
 </body>
 
