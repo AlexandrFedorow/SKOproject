@@ -17,8 +17,10 @@ def main():
             except ValueError:
                 ctr += 1
                 continue
+
         if ctr <= 7:
             return redirect(url_for('rasch'))
+
     return render_template('main.html')
 
 
@@ -26,6 +28,10 @@ def main():
 def rasch():
     session['a'] = Reshenie(session['data'])
     session['a'] = session['a'].get_pogr()
+
+    if session['a'] == 0:   # если ско получилось нулем из-за одинаковых цифр
+        return redirect(url_for('main'))
+        
     return render_template('reshen.html', data=session['a'][1], data_p=session['a'][2], poln=session['a'][0],
                            vilit=session['a'][3], vilit_z=session['a'][4], vilit_sr=session['a'][5],
                            vilit_sko=session['a'][6], sr=session['a'][7], sko=session['a'][8], sr_sko=session['a'][9],

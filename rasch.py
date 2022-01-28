@@ -62,15 +62,18 @@ class Reshenie:
         check = False
         sr, sko, sr_sko, ochen_pogr, pribor, poln = 0, 0, 0, 0, 0, 0
 
-        while not check:
-            sr = self._srednee()
-            sko = self._SKO(sr)
-            check = self._promahi(sko, sr)
-            sr_sko = self._sr_SKO(sko)
-            ochen_pogr = self._ochen_pogr(sr_sko)
-            pribor = self._pribor_pogr()
-            poln = self._poln_pogr(ochen_pogr, pribor)
-            sr = self._srednee()
+        try:
+            while not check:
+                sr = self._srednee()
+                sko = self._SKO(sr)
+                check = self._promahi(sko, sr)
+                sr_sko = self._sr_SKO(sko)
+                ochen_pogr = self._ochen_pogr(sr_sko)
+                pribor = self._pribor_pogr()
+                poln = self._poln_pogr(ochen_pogr, pribor)
+                sr = self._srednee()
+        except:
+            return 0
 
         return poln, self.data, self.data_p, self.vilit, self.vilit_z, self.vilit_sr, self.vilit_sko, sr, sko, sr_sko, ochen_pogr, pribor
 
