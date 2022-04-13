@@ -12,7 +12,7 @@
 <body>
     <div class="shap"><h1 class="text_z"> Расчет погрешности прямых имерений </h1></div>
     <div class="content">
-        <p class="info">Зарнее исключайте очевидные вылеты.</p>
+        <p class="info">Заранее исключайте очевидные вылеты.</p>
           <form class="form_block" method="post">
             <input class="input" id="f0" type="text" name="f0" onChange="check_vvod(this.value)" placeholder="Цена деления (число)"><br><br>
             <input class="input" id="f1" type="text" name="f1" onChange="check_vvod(this.value)" placeholder="Измерение 1 (число)"><br><br>
@@ -31,21 +31,7 @@
           </form>
     </div>
 
-    <div class="b-popup" id="popup1">
-        <div class="main">
 
-            <div class="back">
-              <a href="javascript:PopUpHide()">x</a>
-            </div>
-            <div class="b-popup-content">
-                <!-- admitad.banner: xqg49tacje9197bb4a3c6213826a88 Banggood WW -->
-                    <a target="_blank" rel="nofollow" href="https://ad.admitad.com/g/xqg49tacje9197bb4a3c6213826a88/?i=4">
-                        <img width="220" height="220" border="0" src="https://ad.admitad.com/b/xqg49tacje9197bb4a3c6213826a88/" alt="Banggood WW"/>
-                    </a>
-                <!-- /admitad.banner -->
-            </div>
-        </div>
-    </div>
 
     <script src="{{ url_for('static', filename='vvod.js') }}"></script>
 </body>
