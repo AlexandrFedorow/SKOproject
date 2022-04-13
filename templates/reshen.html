@@ -16,7 +16,7 @@
             <td>Значение</td>
             <td>Вылет</td>
           </tr>
-            {% for i in range(0,10) %}
+            {% for i in range(ctr) %}
           <tr>
             <td>{{data[i]}}</td>
             <td id="{{i}}">{{data_p[i]}}</td>
@@ -47,7 +47,7 @@
                 <p>Полная погрешность: {{ poln }}</p>
             </div>
         </div>
-
+        <br>
         <div class="block"><a href="/"><button class="bt"> Назад </button></a></div>
 
   </div>
