@@ -31,6 +31,7 @@ def rasch():
 
     if session['a'] == 0:   # если ско получилось нулем из-за одинаковых цифр
         return redirect(url_for('main'))
+
         
     return render_template('reshen.html', data=session['a'][1], data_p=session['a'][2], poln=session['a'][0],
                            vilit=session['a'][3], vilit_z=session['a'][4], vilit_sr=session['a'][5],
